@@ -1,5 +1,5 @@
 {
-  "name": "",
+  "name": "gastro_site",
   "type": "module",
   "version": "0.0.1",
   "scripts": {
@@ -9,6 +9,10 @@
     "astro": "astro"
   },
   "dependencies": {
-    "astro": "^5.14.5"
+    "@astrojs/vercel": "^9.0.0",
+    "@tailwindcss/vite": "^4.1.14",
+    "astro": "^5.14.5",
+    "flowbite": "^3.1.2",
+    "tailwindcss": "^4.1.14"
   }
 }

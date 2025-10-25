@@ -1,0 +1,54 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro"
+import { getEntry } from "astro:content";
+import { formatDate } from "../../utils";
+import Tags from "../../components/Tags.astro";
+//a server side render
+//check server in astro.config.mjs file
+//https://docs.astro.build/en/reference/modules/astro-config/
+//https://docs.astro.build/en/guides/configuring-astro/#the-astro-config-file
+ const {slug} = Astro.params;
+//  console.log(slug)
+if (slug === undefined) {
+    throw new Error(`Blog entry not found for slug: ${slug}`) 
+}
+const entry = await getEntry('blog', slug)
+// console.log(entry)
+if (!entry) {
+    return Astro.redirect('/404')
+}
+const {Content} = await entry.render();
+---
+<MainLayout>
+ <div class="mb-4">
+        <a
+          class="bg-gray-100 p-2 mb-6 hover:bg-indigo-500 hover:text-white rounded transition"
+          href="/articles"
+          >👈🏻Înapoi La Toate Articolele
+        </a>
+      </div>
+      <article class="mb-5">
+        <h1 class="text-4xl font-bold mb-4">
+         {entry.data.title}
+        </h1>
+        <h3 class="text-xl mb-2">Scris pe: {formatDate(entry.data.pubDate)}</h3>
+        <Tags tags={entry.data.tags}/>
+        <img
+          src={'/images/'+ entry.data.image}
+          class="object-cover w-full aspect-[16/9] h-auto rounded-xl mb-6"
+          alt="Article image"
+        />
+        <Content />
+      </article>
+
+</MainLayout>
+
+<style is:global>
+p {
+    margin:20px 0;
+}
+h2 {
+    margin: 20px 0;
+    font-size: 1.8rem;
+}
+</style>

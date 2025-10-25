@@ -1,0 +1,100 @@
+---
+import MainLayout from "../../layouts/MainLayout.astro";
+import { getCollection } from "astro:content";
+
+// Ia toate articolele din colecția `blog`, cele ne-"draft" și sortează descrescător după dată
+const allPosts = (await getCollection("blog"))
+  .filter((p) => !p.data.draft)
+  .sort(
+    (a, b) =>
+      new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime()
+  );
+---
+
+<MainLayout>
+  <section class="max-w-6xl mx-auto px-4 py-10">
+    <header class="mb-8">
+      <h1 class="text-3xl font-bold tracking-tight">Toate articolele</h1>
+      <p class="text-gray-600 mt-2">
+        Rețete pentru iarnă și nu numai — murături, zacuscă, siropuri și altele.
+      </p>
+    </header>
+
+    {allPosts.length === 0 ? (
+      <p class="text-gray-500">Nu există articole încă.</p>
+    ) : (
+      <div class="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3">
+        {allPosts.map((post) => {
+          const {
+            title,
+            image,
+            categorie,
+            tags = [],
+            pubDate,
+            author = "Severina",
+          } = post.data;
+          const href = `/blog/${post.slug}/`;
+          const cover = image ?? "/images/placeholder.jpg";
+          const dateStr = new Date(pubDate).toLocaleDateString("ro-RO", {
+            year: "numeric",
+            month: "long",
+            day: "numeric",
+          });
+          return (
+            <article class="bg-white rounded-2xl shadow hover:shadow-md transition">
+              <a href={href} class="block rounded-t-2xl overflow-hidden">
+                <img
+                  src={cover}
+                  alt={title}
+                  class="w-full aspect-[16/9] object-cover"
+                  loading="lazy"
+                  decoding="async"
+                />
+              </a>
+
+              <div class="p-4">
+                <a href={href} class="block">
+                  <h2 class="font-semibold text-lg leading-snug line-clamp-2">
+                    {title}
+                  </h2>
+                </a>
+
+                <div class="mt-2 text-sm text-gray-500 flex items-center gap-2">
+                  <span>{dateStr}</span>
+                  <span aria-hidden="true">•</span>
+                  <span>{author}</span>
+                </div>
+
+                {categorie && (
+                  <div class="mt-3">
+                    <span class="inline-flex items-center rounded-full border px-2 py-0.5 text-xs">
+                      {categorie}
+                    </span>
+                  </div>
+                )}
+
+                {tags.length > 0 && (
+                  <ul class="mt-3 flex flex-wrap gap-2">
+                    {tags.slice(0, 4).map((t) => (
+                      <li class="text-xs bg-gray-100 rounded-full px-2 py-0.5">
+                        #{t}
+                      </li>
+                    ))}
+                  </ul>
+                )}
+
+                <div class="mt-4">
+                  <a
+                    href={href}
+                    class="inline-block text-sm font-medium hover:underline"
+                    >Citește rețeta →</a
+                  >
+                </div>
+              </div>
+            </article>
+          );
+        })}
+      </div>
+    )}
+  </section>
+</MainLayout>

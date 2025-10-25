@@ -1,0 +1,44 @@
+---
+import { getCollection } from "astro:content";
+import type { CollectionEntry } from "astro:content";
+import { capitalize } from "../utils";
+
+const allBlogArticles: CollectionEntry<'blog'>[] = await getCollection('blog')
+const tags: string[]= allBlogArticles.flatMap((article:any) =>article.data.tags )
+// console.log(tags)
+ const uniqueTags: string[] = [...new Set(tags)]
+// console.log(uniqueTags)
+
+---
+<footer class="bg-[#1DCDE2] text-white mt-auto">
+        <div class="container mx-auto mt-10 max-w-7xl px-8">
+          <div class="grid grid-cols-1 gap-5 sm:grid-cols-2 lg:grid-cols-3">
+            <div class="mt-10">
+              <h3 class="text-xl font-semibold mb-4 underline decoration-1">Despre</h3>
+              <p class="text-white text-sm ">
+                Bucătăria tradițională dar și cea modernă prezentată cu drag
+              </p>
+            </div>
+            <div class="mt-5">
+              <h3 class="text-xl font-semibold mb-4 underline decoration-1">Categorii</h3>
+              <div>
+              <ul class="grid grid-cols-2 gap-2 text-white text-sm">
+                {uniqueTags.map((tag) => (
+                  <li class="mb-2">
+                    <a href={'/articles/tag/' + tag }> # {capitalize(tag)}</a>
+                  </li>
+                ))}
+              </ul>
+            </div>
+            </div>
+            <div class="mt-5">
+              <h3 class="text-xl font-semibold mb-4 underline decoration-1">Contact</h3>
+              <ul>
+                <li class="mb2">Email to: severina@yahoo.com</li>
+                <li class="mb2">Facebook @severina</li>
+              </ul>
+            </div>
+          </div>
+        </div>
+        <div class=" p-4 ml-5 my-2 text-center md:text-start text-gray-500"><strong>&copy RCD-2025</strong></div>
+      </footer>
