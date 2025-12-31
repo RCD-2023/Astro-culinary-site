@@ -4,7 +4,7 @@ pubDate: 2025-09-23
 author: 'Severina'
 categorie: 'Conserve'
 tags: ['bulion', 'roșii']
-image: 'img1.jpeg'
+image: 'dummy_img1.jpg'
 ---
 
 ### Ingrediente

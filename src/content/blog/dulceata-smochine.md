@@ -4,7 +4,7 @@ pubDate: 2025-10-02
 author: 'Severina'
 categorie: 'Dulcețuri'
 tags: ['smochine', 'dulceata']
-image: 'img5.jpeg'
+image: 'dummy_img6.jpg'
 ---
 
 ## Ingrediente

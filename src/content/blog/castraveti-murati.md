@@ -4,7 +4,7 @@ pubDate: 2025-10-10
 author: 'Severina'
 categorie: 'Murături'
 tags: ['castraveți', 'murături']
-image: 'img2.jpeg'
+image: 'dummy_img2.jpg'
 ---
 
 ### Ingrediente

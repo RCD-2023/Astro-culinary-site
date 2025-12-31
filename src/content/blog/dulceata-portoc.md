@@ -4,7 +4,7 @@ pubDate: 2025-09-08
 author: 'Severina'
 categorie: 'Dulcețuri'
 tags: ['portocale', 'dulceata']
-image: 'img5.jpeg'
+image: 'dummy_img5.jpg'
 ---
 
 ## Ingrediente

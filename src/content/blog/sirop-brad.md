@@ -4,7 +4,7 @@ pubDate: 2025-08-25
 author: 'Severina'
 categorie: 'Siropuri'
 tags: ['brad', 'sirop']
-image: 'img7.jpeg'
+image: 'dummy_img8.jpg'
 ---
 
 Siropul de muguri de brad este un remediu natural excelent pentru tuse și răceli.

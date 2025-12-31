@@ -2,9 +2,8 @@
 import MainLayout from "../../layouts/MainLayout.astro";
 import { getCollection } from "astro:content";
 
-// Ia toate articolele din colecția `blog`, cele ne-"draft" și sortează descrescător după dată
+// Ia toate articolele din colecția `blog` și sortează descrescător după dată
 const allPosts = (await getCollection("blog"))
-  .filter((p) => !p.data.draft)
   .sort(
     (a, b) =>
       new Date(b.data.pubDate).getTime() - new Date(a.data.pubDate).getTime()

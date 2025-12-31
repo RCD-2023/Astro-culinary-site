@@ -4,7 +4,7 @@ pubDate: 2024-10-13
 author: 'Severina'
 categorie: 'Conserve'
 tags: ['zarzavat', 'conserva']
-image: 'img7.jpeg'
+image: 'dummy_img8.jpg'
 ---
 
 ### Ingrediente

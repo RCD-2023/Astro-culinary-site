@@ -4,7 +4,7 @@ pubDate: 2024-11-23
 author: 'Severina'
 categorie: 'Conserve'
 tags: ['ghebe', 'zacusca']
-image: 'img6.jpeg'
+image: 'dummy_img7.jpg'
 ---
 
 Zacusca de ghebe are o aromă intensă și o textură fină, perfectă pentru iarnă.

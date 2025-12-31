@@ -4,7 +4,7 @@ pubDate: 2025-10-05
 author: 'Severina'
 categorie: 'Dulcețuri'
 tags: ['afine', 'dulceata']
-image: 'img4.jpeg'
+image: 'dummy_img3.jpg'
 ---
 
 ## Ingrediente

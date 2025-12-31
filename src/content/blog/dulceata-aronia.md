@@ -4,7 +4,7 @@ pubDate: 2025-09-16
 author: 'Severina'
 categorie: 'Dulcețuri'
 tags: ['aronia', 'dulceata']
-image: 'img3.jpeg'
+image: 'dummy_img4.jpg'
 ---
 
 ## Ingrediente

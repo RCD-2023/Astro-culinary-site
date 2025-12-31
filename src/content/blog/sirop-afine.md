@@ -4,7 +4,7 @@ pubDate: 2025-09-17
 author: 'Severina'
 categorie: 'Siropuri'
 tags: ['afine', 'sirop']
-image: 'img7.jpeg'
+image: 'dummy_img6.jpg'
 ---
 
 Siropul de afine are o culoare intensă și un gust plin, ideal pentru limonade, deserturi sau băuturi răcoritoare.

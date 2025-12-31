@@ -4,7 +4,7 @@ pubDate: 2025-08-23
 author: 'Severina'
 categorie: 'Siropuri'
 tags: ['aronia', 'sirop']
-image: 'img7.jpeg'
+image: 'dummy_img7.jpg'
 ---
 
 ## Ingrediente

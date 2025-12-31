@@ -4,7 +4,7 @@ pubDate: 2024-11-15
 author: 'Severina'
 categorie: 'Conserve'
 tags: ['vinete', 'zacusca']
-image: 'img6.jpeg'
+image: 'dummy_img6.jpg'
 ---
 
 ## Ingrediente:
