@@ -1,43 +1,83 @@
-# Astro Starter Kit: Minimal
+# Astro Culinary Site
 
-```sh
-npm create astro@latest -- --template minimal
+A server-side rendered (SSR) culinary blog-style website built with **Astro**.  
+The project focuses on content-driven pages, clean UI, and performance-oriented rendering.
+This application was developed as a personal project to practice Astro fundamentals, SSR concepts, and modern frontend workflows.
+
+---
+
+## Live Demo
+
+https://astro-culinary-site.vercel.app/
+
+---
+
+## Tech Stack
+
+- Astro (Server Side Rendering)
+- TypeScript
+- HTML5
+- Tailwind CSS and Flowbite
+- Astro Content Collections
+
+---
+
+## Features
+
+- Server-side rendered pages
+- Blog-style content structure
+- Tag-based navigation
+- Search functionality
+- Responsive layout
+- Clean, lightweight UI
+- Dummy content used for demonstration purposes
+
+---
+
+## Project Structure
+
+- Content is managed using **Astro Content Collections** and **Zod** validation
+- Pages are rendered on the server using Astro SSR
+- Components are modular and reusable
+- Styling is handled with global styles
+
+---
+
+## Getting Started (Local Setup)
+
+### Prerequisites
+
+- Node.js (v18 or higher recommended)
+- npm or pnpm
+
+### Installation
+
+```
+npm install
 ```
 
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
+### Development
 
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-├── src/
-│   └── pages/
-│       └── index.astro
-└── package.json
+```
+npm run dev
 ```
 
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
+### Build
 
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
+```
+npm run build
+```
 
-Any static assets, like images, can be placed in the `public/` directory.
+---
 
-## 🧞 Commands
+## Notes
 
-All commands are run from the root of the project, from a terminal:
+- This project uses placeholder (dummy) images and content.
+- The focus is on structure, rendering strategy, and frontend architecture rather than real production data.
 
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
+---
 
-## 👀 Want to learn more?
+## Author
 
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
+Developed by Codreanu Daniel  
+Portfolio: https://rcd-portfolio.netlify.app/
